@@ -24,21 +24,7 @@ const useTabs = (initialTab, allTabs) => {
 };
 
 const App = () => {
-  const { currentItem, changeItem } = useTabs(0, content);
-  return (
-    <div className="App">
-      {content.map((section, index) => (
-        //changeItem(index) 를 하게되면 setCurrentIndex를 이용하여 state ("currentIndex")를 변경함
-        <button key={index} onClick={() => changeItem(index)}>
-          {section.tab}
-        </button>
-      ))}
-      <div>
-        <p>{currentItem.content}</p>
-      </div>
-    </div>
-  );
-};
-
+  return;
+    };
 const rootElement = document.getElementById("root");
 ReactDOM.render(<App />, rootElement);
