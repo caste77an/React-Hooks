@@ -10,7 +10,7 @@ const useInput = (initialValue, validator) => {
     } = event;
     let willUpdate = true;
     if (typeof validator === "function") {
-			//validator는 maxLen()에 정의된 함수
+      //validator는 maxLen()에 정의된 함수
       willUpdate = validator(value);
     }
     if (willUpdate) {
@@ -21,7 +21,7 @@ const useInput = (initialValue, validator) => {
 };
 
 const App = () => {
-	// value.length 의 return 은 true, false (value.length:11이 되면 false)
+  // value.length 의 return 은 true, false (value.length:11이 되면 false)
   const maxLen = (value) => value.length <= 10;
   const name = useInput("Mr.", maxLen);
   return (
