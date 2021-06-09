@@ -12,6 +12,7 @@ const useBeforeLeave = (onBefore) => {
     }
   };
   useEffect(() => {
+    //mouseleave 이벤트가 발생했을때 handle()을 실행함
     document.addEventListener("mouseleave", handle);
     return () => document.removeEventListener("mouseleave", handle);
   }, []);
