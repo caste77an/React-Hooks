@@ -3,6 +3,7 @@ import ReactDOM from "react-dom";
 
 const useFullscreen = (callback) => {
   const element = useRef();
+  // Fullscreen 상태정보(boolean)인 isFull을 받아서 callback 함수를 실행시키기 위한 작업
   const runCb = (isFull) => {
     if (callback && typeof callback === "function") {
       callback(isFull);
@@ -12,6 +13,7 @@ const useFullscreen = (callback) => {
     if (element.current) {
       if (element.current.requestFullscreen) {
         element.current.requestFullscreen();
+        // Browser 마다 호환이 다르기 때문에 적용
       } else if (element.current.mozRequestFullScreen) {
         element.current.mozRequestFullScreen();
       } else if (element.current.webkitRequestFullscreen) {
