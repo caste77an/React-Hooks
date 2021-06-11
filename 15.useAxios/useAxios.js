@@ -16,6 +16,7 @@ const useAxios = (opts, axiosInstance = defaultAxios) => {
       ...state,
       loading: true,
     });
+    // 임의의 숫자 생성을 위한 setTrigger
     setTrigger(Date.now());
   };
   useEffect(() => {
